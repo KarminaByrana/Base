@@ -1,3 +1,5 @@
+
+
 public class Employee {
 
     private long id;
@@ -5,22 +7,19 @@ public class Employee {
     private int age;
     private double salary;
     private String gender;
-    int fixedBugs;
-    double defaultBugRate;
 
     Employee () {
 
 
     }
 
-    Employee (long id, String name, double salary, int age, String gender, int fixedBugs, double defaultBugRate) {
+    Employee (long id, String name, double salary, int age, String gender) {
         this.id = id;
         this.name = name;
         this.salary = salary;
         this.age = age;
         this.gender = gender;
-        this.fixedBugs = fixedBugs;
-        this.defaultBugRate = defaultBugRate;
+
 
         }
     public void setId(long id) {
@@ -62,14 +61,18 @@ public class Employee {
         this.gender = gender;
     }
 
+    double calculateSalary () {
+        double result = getSalary();
+        return result;
+    }
+
     public String toString () {
         return "Employee {" + "id: " + id
                 + ", full name: " + name
                 + ", salary: "+ salary
                 + ", age: " + age
                 + ", gender: " + gender
-                + ", fixedBugs: " + fixedBugs
-                + ", defaultBugRates: " + defaultBugRate
                 + "}";
         }
+
     }

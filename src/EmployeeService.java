@@ -28,7 +28,7 @@ public class EmployeeService {
     double calculateSalaryAndBonus() {
         double sumMonthSalaryBonus = 0;
         for (int i = 0; i < employeesArr.length; i++) {
-            sumMonthSalaryBonus += employeesArr[i].getSalary() + employeesArr[i].fixedBugs * employeesArr[i].defaultBugRate;
+            sumMonthSalaryBonus += employeesArr[i].calculateSalary();
         }
         return sumMonthSalaryBonus;
     }
